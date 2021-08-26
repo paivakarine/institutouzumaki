@@ -1,0 +1,83 @@
+input,
+select,
+textarea {
+  background-color: white;
+  border: thin solid blue;
+  padding: 10px;
+  border-radius: 5px;
+}
+button {
+  border: thin solid rgb(0, 35, 236);
+  border-radius: 5px;
+  padding: 15px 10px;
+  outline: none;
+  background-color: rgb(194, 196, 209);
+  color: rgb(17, 0, 253);
+  font-weight: 600 !important;
+  font-size: 16px;
+  width: 100%;
+  /* display: block; */
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+}
+#home img {
+  max-width: 600px;
+}
+
+#home a {
+  background-color: blue;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+}
+.group {
+  display: flex;
+}
+
+.group div {
+  flex: 1;
+  margin: 5px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(248, 235, 225);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.titleFormulario {
+
+  color: black;
+  text-align: center;
+  padding: 18px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.form-group label {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: blue;
+}
+
+#form {
+  background-color: rgb(248, 238, 231);
+  min-width: 780px;
+  padding: 10px;
+}
+
+#form .title {
+  font-size: 22px;
+  color: #3a6fa3;
+  margin: 10px 0;
+  text-align: center;
+}

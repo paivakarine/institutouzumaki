@@ -1,0 +1,119 @@
+<div class="formularioPrincipal">
+    <div id="formComponent">
+      <div class="titleFormulario">Informe os dados abaixo:</div>
+
+      <form action="/formParents" method="POST">
+        
+        
+        <!-- Info pessoais de entrada e requeridas(obrigatórias!) -->
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="nome">E-mail:</label>
+          <input type="email" name="email" placeholder="seuemail@exemplo.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="nome">Data de nascimento:</label>
+          <input type="date" name="dataNascimento" value="00/00/0000" required />
+        </div>
+        
+
+        <!-- Identidade de gênero -->
+        <div class="group">
+          <div class="form-group">
+            <label for="nome">Identidade de gênero:</label>
+            <select name="gender" required id="idGender">
+              <option value="">Selecione uma opção</option>
+
+             <% listGender.map((gender) =>{ %>
+                <option value="<%= gender.id %>"><%= gender.description %></option>
+             <% }) %> 
+            </select>
+        </div>
+
+        <!-- Estado civil -->
+        <div class="form-group estadoCivil">
+            <label for="nome">Estado civil:</label>
+            <select name="marital" required id="idMarital">
+              <option value="">Selecione uma opção</option>
+                
+              <% listMarital.map((marital) => { %>
+                    <option value="<%= marital.id %>"><%= marital.description %></option>
+
+                <% }) %>
+            </select>
+           
+          </div>
+        </div>
+
+
+        <!-- Profissão e rendas -->
+        <div class="form-group">
+          <label for="nome">Profissão:</label>
+          <input type="text" name="profissao" placeholder="" />
+          <label for="nome">Renda individual:</label>
+            <input type="number" name="renda1" placeholder="R$" />
+        </div>
+
+        <div class="form-group">
+            <label for="nome">Renda conjuge:</label>
+            <input type="number" name="renda2" placeholder="R$" />
+            <label for="nome">Renda total familiar:</label>
+            <input type="number" name="rendaFamiliar" placeholder="R$" />
+        </div>
+
+  
+        <!-- Telefones pessoais e comercial -->
+          <div class="form-group">
+            <label for="nome">Telefone pessoal:</label>
+           
+            <input type="number" name="telefone1" placeholder="(  )" required />
+            <label for="nome">Telefone para contato por WhatsApp / Telegram:</label>
+               <input type="number" name="telefone2" placeholder="(  )" />
+            <label for="nome">Telefone comercial:</label>
+               <input type="number" name="telefone3" placeholder="(  )" />
+          </div>
+          
+
+        <!-- Endereços -->
+          <div class="form-group">
+
+          <label for="name">Endereço residencial:</label>
+          <input type="text" name="endereco1" placeholder="" />
+
+          <label for="name">Endereço comercial:</label>
+          <input type="text" name="endereco2" placeholder="" />
+
+          </div>
+
+
+        <!-- Testemunhas e seus contatos -->
+          <div class="form-group">
+
+            <label for="name">Testemunha:</label>
+              <input type="text" name="name2" placeholder="" required />
+            <label for="nome">E-mail:</label>
+              <input type="email" name="email2" placeholder="emailtestemunha@exemplo.com" required />
+            <label for="nome">Telefone:</label>
+              <input type="number" name="telefone4" placeholder="(  )" required />
+            
+              <label for="name">Testemunha:</label>
+              <input type="text" name="name3" placeholder="" required />
+            <label for="nome">E-mail:</label>
+              <input type="email" name="email3" placeholder="emailtestemunha@exemplo.com" required />
+            <label for="nome">Telefone:</label>
+              <input type="number" name="telefone5" placeholder="(  )" required />
+            </div>
+
+            <!-- Botao para enviar os dados preenchidos -->
+
+            <button>Enviar</button> 
+      </form>
+
+    
+    </div>
+  </div>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados informados</title>
+</head>
+<body>
+
+    
+
+<!-- STYLE DO PDF -->
+
+<style>
+
+html, body {
+
+    max-height: 80vh;
+    position: relative;
+
+}
+
+
+header { 
+    
+    text-align: center; 
+    background-color: lightblue; 
+    margin: 10px;
+    padding: 5px; 
+    color: black; 
+    font-size: 18px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-control {
+
+    background-color: #dfe8f1;
+    display: flex;
+    flex-direction: column;
+    margin: 1px 10px 0px 10px;
+    padding: 5px;
+        
+}
+
+.label { 
+    
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+
+footer { 
+    
+    text-align: center; 
+    background-color: lightblue; 
+    margin: 10px;
+    padding: 10px; 
+    color: black; 
+    font-size: 12px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     
+}
+
+
+</style>
+
+
+
+<!-- ESTRUTURA DO PDF -->
+
+<header>
+<div class="titlePDF">Dados informados</div>
+</header>
+ 
+<div class="content">
+
+    <div class="form-control">
+        <div class="label">Nome: </div> <%= name %> 
+    </div>   
+
+    <div class="form-control">
+        <div class="label">Endereço: </div> <%= endereco1 %> 
+    </div>   
+
+    <div class="form-control">
+        <div class="label">Email: </div> <%= email %> 
+    </div>       
+      
+    <div class="form-control">
+        <div class="label">Telefone pessoal: </div><%= telefone1 %>
+    </div>
+
+    <div class="form-control">
+        <div class="label">Telefone para contato por WhatsApp / Telegram:</div> <%= telefone2 %>
+    </div>
+
+    <div class="form-control">
+        <div class="label">Data de nascimento:</div> <%= dataNascimento %>
+    </div>
+
+    <div class="form-control">
+        <div class="label">Identidade de gênero: </div> <%= gender %> 
+    </div>
+
+    <div class="form-control">
+        <div class="label">Estado civil: </div> <%= marital %>
+    </div>
+
+    <div class="form-control"> 
+        <div class="label">Profissão: </div> <%= profissao %>
+    </div>
+
+    <div class="form-control"> 
+        <div class="label">Telefone comercial: </div> <%= telefone3 %>
+    </div>
+
+    <div class="form-control"> 
+        <div class="label">Endereço comercial: </div><%= endereco2 %>
+    </div>
+    <div class="form-control">
+        <div class="label">Renda individual: </div> <%= renda1 %> 
+    </div>
+               
+    <div class="form-control">
+        <div class="label">Renda conjuge: </div> <%= renda2 %> 
+    </div>
+
+    <div class="form-control">
+        <div class="label">Renda familiar: </div> <%= rendaFamiliar %>
+    </div>
+    
+    <div class="form-control">
+        <div class="label">Testemunha: </div><%= name2 %>
+    </div>
+
+    <div class="form-control">
+       <div class="label">E-mail da testemunha: </div><%= email2 %>
+    </div>
+
+    <div class="form-control">
+        <div class="label">Telefone: </div> <%= telefone4 %>
+    </div>
+
+    <div class="form-control">
+        <div class="label">Testemunha:</div> <%= name3 %>
+    </div>
+    <div class="form-control">
+        <div class="label">E-mail:</div> <%= email3 %>
+    </div>
+    <div class="form-control">
+        <div class="label">Telefone pessoal:</div><%= telefone5 %>
+    </div>
+
+</div>
+
+
+
+<!-- FOOTER completo com JS -->
+
+<footer>
+
+   <script language= javascript type="text/javascript">
+    
+ 
+    monthName = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+
+    now = new Date
+
+    document.write (" Documento impresso em " + now.getDate() + " de " + monthName [now.getMonth() ] + " de " + now.getFullYear() + "- para o Instituto Uzumaki.");
+   
+    </script>
+
+</footer>
+
+
+</body>
+</html>
